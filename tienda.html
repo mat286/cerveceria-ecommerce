@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos.css">
+    <title>beer</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><img src="https://r2.starryai.com/results/874936768/3f1fcbd4-07a9-40b2-b1c7-8b581802373d.webp" alt="logo" class="icono"></a>
+        <input type="checkbox" id="side-menu" class="side-menu">
+        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="cerbezas.html">Cervezas</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="medio-ini" id="medio-ini">
+
+        <a href="" onclick="cambioATienda(venta)">
+            <div class="product-conteiner" data-aos="flip-left">
+                <h3>venta</h3>
+                <img src="img/venta.jpg" />
+                <p>como funciona la venta y en que conciste, relleno lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.... <a href="#ver-mas" id="masVer" onclick="botoneParabusqueda(6)"><p class="vermass">ver mas</p></a>
+                </p>
+            </div>
+        </a>
+        <a href="" onclick="cambioATienda(pepe)">
+            <div class="product-conteiner" data-aos="flip-left">
+                <h3>pre-venta</h3>
+                <img src="img/pre-venta.jpg" />
+                <p>como funciona la pre-venta y en que conciste, relleno lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.... <a href="#ver-mas" id="masVer2" onclick="botoneParabusqueda(7)">ver mas</a>
+                </p>
+            </div>
+        </a>
+
+        <a href="" onclick="cambioATienda(pepe)">
+            <div class="product-conteiner" data-aos="flip-left">
+                <h3>p2p</h3>
+                <img src="img/p2p.jpg" />
+                <p>como funciona la p2p y en que conciste, relleno lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.... <a href="#ver-mas" id="masVer3" onclick="botoneParabusqueda(8)">ver mas</a>
+                </p>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="todo" id="product-cards" style="display: none;">
+        <div class="medio">
+            <h1>Nuestras formas de comercialización</h1>
+            <p>La página web ofrece diferentes opciones de compra, incluyendo pre-venta, venta directa y compra peer-to-peer. <br> Los clientes pueden elegir la opción que mejor se adapte a sus necesidades.</p>
+        </div>
+        <div class="checkoutC"><button id="checkout" class="button-checkout" ondblclick="showOrder()">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/udbbfuld.json" trigger="hover" colors="primary:#848484"
+                    style="width:50px;height:50px">
+                </lord-icon> Carrito $0
+            </button></div>
+
+        <div class="categoriasT" id="categoriasT">
+            <div class="categoriaT activa" data-categoria="venta">
+
+                <p>venta</p>
+            </div>
+            <div class="categoriaT" data-categoria="preVenta">
+
+                <p>pre-venta</p>
+            </div>
+            <div class="categoriaT" data-categoria="p2p">
+
+                <p>p2p</p>
+            </div>
+        </div>
+
+        <div>
+            <!-- Productos venta -->
+            <div class="contenedor-preguntasT activo" data-categoria="venta">
+                <div class="medio" id="medio-venta"></div>
+
+            </div>
+
+            <!-- Productos de pre venta -->
+            <div class="contenedor-preguntasT" data-categoria="preVenta">
+
+                <div class="medio" id="medio-pre"></div>
+
+            </div>
+
+            <!-- Productos de p2p -->
+            <div class="contenedor-preguntasT" data-categoria="p2p">
+                <div class="medio" id="medio-p2p">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="order" class="order">
+        <h2>Orden</h2>
+
+        <table id="order-table" class="order-table">
+        </table>
+        <h2 class="botUnion" onclick="algo()">Ingresar cupon de descuento</h2>
+        <h3 id="order-total">total</h3>
+
+        <h1>Dirección de envío(Solo para capital federal) :</h1>
+
+        <div id="order-shipping" class="order-shipping">
+            <div class="form-group">
+                <label for="name">Nombre completo:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono:</label>
+                <input type="text" name="phone" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="city">Barrio:</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div class="form-group">
+                <label for="addressLine2">Dirección :</label>
+                <input type="text" name="addressLine2" id="addressLine2">
+            </div>
+            <div class="form-group">
+                <label for="name">Piso/Timbre:</label>
+                <input type="text" name="dep2" id="dep2">
+            </div>
+
+        </div>
+        <div id="order-actions" class="order-actions">
+            <p onclick="tienda()">
+                << volver</p>
+                    <p onclick="pay()">confirmar >></p>
+        </div>
+    </div>
+
+
+    <div class="oscure " id="oscure">
+
+        <div class="popup" id="popup">
+            <a href="#" class="cerrar" onclick="cerrar()">x</a>
+            <h1>Promociones disponibles: </h1>
+
+            <input type="button" class="ofertas" value="10% de descuento">
+            <input type="button" class="ofertas" value="envio gratis">
+            <input type="button" class="ofertas" value="50% gratis">
+            <input type="button" class="ofertas" value="2da gratis">
+
+        </div>
+
+    </div>
+
+
+    <script src="scrips.js"></script>
+    <div class="pie">
+        <p>pie de pagina</p>
+    </div>
+
+
+</body>
+
+</html>

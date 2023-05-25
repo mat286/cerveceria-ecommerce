@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos.css">
+    <title>beer</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><img src="https://r2.starryai.com/results/874936768/3f1fcbd4-07a9-40b2-b1c7-8b581802373d.webp" alt="logo" class="icono"></a>
+        <input type="checkbox" id="side-menu" class="side-menu">
+        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="cerbezas.html">Cervezas</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="cuentaDatos" id="cuentaExiste">
+        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/hbvyhtse.json" trigger="hover" style="width:200px;height:200px;" >
+        </lord-icon>
+        <h1>ingrese a su cuenta</h1>
+        <div class="contenedorCuenta">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombrei">
+        </div>
+
+        <div class="contenedorCuenta">
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseñai">
+        </div>
+
+        <button id="noCuenta" onclick="cuentaCreate()">Aun no tengo cuenta</button>
+        <button id="boton" onclick="botone()">Enviar</button>
+
+    </div>
+
+    <div class="cuentaDatos" id="cuentaCreate">
+        <h1>create una cuenta</h1>
+        <div class="contenedorCuenta">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div class="contenedorCuenta">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="contenedorCuenta">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" name="contraseña" id="contraseña">
+            </div>
+            <div class="contenedorCuenta">
+                <label for="validContraseña">Contraseña:</label>
+                <input type="password" name="validContraseña" id="validContraseña">
+            </div>
+
+            <div class="contenedorCuenta">
+                <label for="codigoAfi">Codigo de afiliado:</label>
+                <input type="text" name="codigoAfi" id="codigoAfi">
+            </div>
+
+            <button id="boton" onclick="cuentaExiste()">ya tengo una cuenta</button>
+            <button id="boton" onclick="botone2()">Enviar</button>
+        </div>
+    </div>
+
+
+    <div class="barra" id="miCuentaLateral">
+
+        <ul>
+            <li>
+                <a href="#" id="cateCuenta1" onclick="botonCuentaTodo('cuenta','1')">Mi Cuenta</a>
+            </li>
+            <li>
+                <a href="#" id="cateCuenta2" onclick="botonCuentaTodo('cuenta','2')">Mis Pedidos</a>
+            </li>
+            <li>
+                <a href="#" id="cateCuenta3" onclick="botonCuentaTodo('cuenta','3')">Mis Tickets</a>
+            </li>
+            <li>
+                <a href="#" id="cateCuenta4" onclick="botonCuentaTodo('cuenta','4')">Mis Ordenes</a>
+            </li>
+            <li><a href="#">Ofertas</a></li>
+        </ul>
+    </div>
+
+    <div id="miCuenta" class="miCuenta">
+
+        <div class="publiVideo">
+            <div id="cuentaCreadaC">
+                <div class="todoCuenta">
+                    <div id="cuenta1">
+                        <div class="TituloEinfo">
+                            <h1>Mi Cuenta</h1>
+                            <p>Mira y edita tu informacion personal</p>
+                        </div>
+                        <div class="contenidoCuenta" id="MiCuentaContenido">
+
+                        </div>
+                    </div>
+
+                    <div id="cuenta2">
+                        <div class="TituloEinfo">
+                            <h1>Mis Pedidos</h1>
+                            <p>Revisa tu historial de pedidos o verifica el estado de unn pedido reciente</p>
+                        </div>
+                        <div class="contenidoCuenta">
+                            <h3>Todavia no se ha realizado ningun pedido.</h3>
+                            <a href="tienda.html" id="atienda">Comenza ahora</a>
+                        </div>
+                    </div>
+
+                    <div id="cuenta3">
+                        <div class="TituloEinfo">
+                            <h1>Mis Tickets</h1>
+                            <p>Guarda los detalles de tus compras y ventas</p>
+                        </div>
+                        <div class="contenidoCuenta">
+                            <h3>Todavia no se ha realizado ningun pedido.</h3>
+                            <a href="tienda.html" id="atienda2">Comenza ahora</a>
+                        </div>
+                    </div>
+
+                    <div id="cuenta4">
+                        <div class="TituloEinfo">
+                            <h1>Mis Ordenes</h1>
+                            <p>Guarda los detalles de tus compras y ventas</p>
+                        </div>
+                        <div class="contenidoCuenta">
+                            <h3>Todavia no se ha realizado ningun pedido.</h3>
+                            <a href="tienda.html" id="atienda3">Comenza ahora</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="scrips.js"></script>
+    <div class="pie">
+        <p>pie de pagina</p>
+    </div>
+
+</body>
+
+</html>

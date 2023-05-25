@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Empresa - mi-cuenta</title>
+    <link rel="stylesheet" href="ppp.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="ssssss.html" class="logo"><img src="img/pre-venta.jpg" alt="logo" class="icono"></a>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="cerbezas.html">Cervezas</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="#informacion-personal">Información personal</a></li>
+                <li><a href="#historial-compras">Historial de compras</a></li>
+                <li><a href="#cervezas-camino">Cervezas en camino</a></li>
+                <li><a href="#ordenes-venta-p2p">Órdenes de venta P2P</a></li>
+                <li><a href="#tickets-preventa">Tickets de Pre-venta</a></li>
+            </ul>
+        </div>
+
+
+        <section class="mi-cuenta">
+
+            <h2>Mi cuenta</h2>
+            <div class="content">
+
+                <div id="informacion-personal">
+                    <h3>Información personal</h3>
+                    <form>
+                      <label for="nombre">Nombre:</label>
+                      <input type="text" id="nombre" name="nombre" value="Juan Pérez">
+                      <label for="correo">Correo electrónico:</label>
+                      <input type="email" id="correo" name="correo" value="juan.perez@gmail.com">
+                      <label for="telefono">Teléfono:</label>
+                      <input type="tel" id="telefono" name="telefono" value="555-1234">
+                      <label for="direccion">Dirección:</label>
+                      <textarea id="direccion" name="direccion">Calle 1234, Colonia Centro, Ciudad de México</textarea>
+                      <button type="submit">Guardar cambios</button>
+                    </form>
+                  </div>
+                  
+                <div id="historial-compras">
+                    <h3>Historial de compras</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Producto</th>
+                                <th>Tipo</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01/01/2023</td>
+                                <td>Cerveza artesanal IPA</td>
+                                <td>Venta</td>
+                                <td>2</td>
+                                <td>$200.00</td>
+                            </tr>
+                            <tr>
+                                <td>02/15/2023</td>
+                                <td>Cerveza artesanal Stout</td>
+                                <td>Pre-Venta</td>
+                                <td>1</td>
+                                <td>$80.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="cervezas-camino">
+                    <h3>Cervezas en camino</h3>
+                    <ul>
+                        <li>Cerveza artesanal Lager (2 unidades) - Fecha de entrega: 03/01/2023</li>
+                        <li>Cerveza artesanal Pale Ale (1 unidad) - Fecha de entrega: 03/05/2023</li>
+                    </ul>
+                </div>
+
+                <div id="ordenes-venta-p2p">
+                    <h3>Órdenes de venta P2P</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                                <th>Vendedor</th>
+                                <th>Fecha de entrega</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>02/01/2023</td>
+                                <td>Cerveza artesanal IPA</td>
+                                <td>2</td>
+                                <td>$200.00</td>
+                                <td>Juan Pérez</td>
+                                <td>03/10/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02/20/2023</td>
+                                <td>Cerveza artesanal Stout</td>
+                                <td>1</td>
+                                <td>$80.00</td>
+                                <td>María García</td>
+                                <td>03/15/2023</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="tickets-preventa">
+                    <h2>Tickets de Pre-venta</h2>
+                    <ul>
+                        <li>
+                            <h3>Pre-venta #1234</h3>
+                            <p>Fecha de compra: 15/02/2023</p>
+                            <p>Fecha de entrega: 28/02/2023</p>
+                            <p>Estado: En proceso de envío</p>
+                        </li>
+                        <li>
+                            <h3>Pre-venta #5678</h3>
+                            <p>Fecha de compra: 17/02/2023</p>
+                            <p>Fecha de entrega: 02/03/2023</p>
+                            <p>Estado: Pendiente</p>
+                        </li>
+                        <li>
+                            <h3>Pre-venta #9012</h3>
+                            <p>Fecha de compra: 20/02/2023</p>
+                            <p>Fecha de entrega: 05/03/2023</p>
+                            <p>Estado: En espera de confirmación</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script>
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+        const contentDivs = document.querySelectorAll('.content > div');
+
+        for (let i = 0; i < sidebarLinks.length; i++) {
+            sidebarLinks[i].addEventListener('click', (event) => {
+                event.preventDefault();
+
+                for (let j = 0; j < contentDivs.length; j++) {
+                    contentDivs[j].style.display = 'none';
+                }
+
+                const targetDiv = event.target.getAttribute('href');
+                document.querySelector(targetDiv).style.display = 'block';
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>
